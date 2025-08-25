@@ -1,6 +1,6 @@
 run-app:
 	@echo "Start Running FastAPI"
-	fastapi dev src/fast_zero/app.py
+	fastapi dev src/fast_zero/app.py --host 0.0.0.0 --port 8000
 
 ruff-check-dir:
 	@echo "Checking the directory"
@@ -15,6 +15,7 @@ ruff-format:
 	make ruff-check-fix && ruff format .
 
 test:
+	@echo "Testing files"
 	pytest --cov=src -vv
 
 test-post:
