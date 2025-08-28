@@ -1,6 +1,6 @@
 run-app:
 	@echo "Start Running FastAPI"
-	fastapi dev src/fast_zero/app.py --host 0.0.0.0 --port 8000
+	uvicorn src.fast_zero.app:app --host 0.0.0.0 --port 8080 --reload
 
 ruff-check-dir:
 	@echo "Checking the directory"
