@@ -1,5 +1,4 @@
 from http import HTTPStatus
-from http.client import responses
 
 
 def test_1_app_should_return_ok(client):

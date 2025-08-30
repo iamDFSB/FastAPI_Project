@@ -2,7 +2,13 @@ from http import HTTPStatus
 
 from fastapi import FastAPI, HTTPException
 
-from src.fast_zero.schemas import Message, UserDB, UserPublic, UserSchema, ListUsers
+from src.fast_zero.schemas import (
+    ListUsers,
+    Message,
+    UserDB,
+    UserPublic,
+    UserSchema,
+)
 
 app = FastAPI()
 database = []
@@ -35,7 +41,7 @@ def update_user_by_id(user_id: int, user: UserSchema):
         **user.model_dump()
     )
 
-    database[user_id-1] = user_with_id
+    database[user_id - 1] = user_with_id
 
     return user_with_id
 
