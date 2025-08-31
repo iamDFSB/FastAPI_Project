@@ -47,7 +47,7 @@ Instale as dependências com **Poetry**:
 Ative o ambiente virtual do Poetry:
 
 ```bash
-poetry shell
+  poetry shell
 ```
 
 Inicie a aplicação via **Makefile**:
